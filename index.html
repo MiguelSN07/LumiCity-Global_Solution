@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dashboard acadêmico LumiCity: comparação de consumo e iluminação pública sustentável.">
+<title>LumiCity | Dashboard energético</title>
+<style>
+:root{--bg:#f3f6f4;--surface:#fff;--ink:#172b25;--muted:#65756e;--green:#167653;--mint:#dff3e9;--line:#e1e9e4;--amber:#f4b942;--blue:#477f9c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:1120px;margin:auto;padding:28px 22px 52px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:12px}.mark{width:44px;height:44px;border-radius:14px;background:var(--green);color:white;display:grid;place-items:center;font-size:23px}.brand strong{font-size:19px;letter-spacing:.2px}.brand small{display:block;color:var(--muted);font-size:12px}.tag{background:var(--mint);color:var(--green);font-size:12px;font-weight:700;padding:7px 11px;border-radius:999px}
+.hero{background:#123f31;color:white;border-radius:24px;padding:30px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff22;border-radius:50%;right:-55px;top:-120px;box-shadow:0 0 0 30px #ffffff0c,0 0 0 60px #ffffff08}.eyebrow{color:#a8dec5;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:1.5px}.hero h1{font-size:clamp(27px,4vw,40px);line-height:1.1;margin:10px 0}.hero p{color:#d5e8df;max-width:660px;margin:0}.hero .meta{margin-top:20px;font-size:13px;color:#b9d7ca}
+.section{margin-top:30px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px}.section h2{font-size:19px;margin:0}.sub{color:var(--muted);font-size:13px;margin:3px 0 0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:18px;min-width:0}.kpi-label{color:var(--muted);font-size:12px;font-weight:650}.kpi{font-size:clamp(22px,3vw,29px);font-weight:800;letter-spacing:-1px;margin:7px 0 2px}.unit{font-size:12px;color:var(--muted)}.kpi-note{font-size:12px;color:var(--green);margin-top:10px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}.bar-row{margin:17px 0}.bar-title{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:7px}.track{height:13px;background:#edf2ef;border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px}.sodium{background:#d49a35;width:100%}.led{background:#238b67;width:47.6%}.solar{background:#4b91ae;width:47.6%}.legend{font-size:12px;color:var(--muted);margin-top:12px}
+.solar-box{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini{background:#f6faf7;border:1px solid var(--line);border-radius:13px;padding:14px}.mini b{font-size:20px;display:block}.mini span{font-size:12px;color:var(--muted)}
+.diagram{width:100%;display:block;border-radius:13px;border:1px solid var(--line);margin-top:12px}.note{border-left:4px solid var(--amber);background:#fff9e9;padding:14px 16px;border-radius:0 12px 12px 0;color:#594a25;font-size:13px}
+.footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12px}
+button{font:inherit;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 12px;color:var(--ink);cursor:pointer}button:hover{border-color:var(--green)}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.compare,.solar-box{grid-template-columns:1fr}}
+@media(max-width:480px){.wrap{padding:18px 14px 36px}.hero{padding:23px}.top{align-items:flex-start}.tag{font-size:10px}.grid{gap:9px}.card{padding:14px}.kpi{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="mark">☀</div><div><strong>LumiCity</strong><small>Energia inteligente para a cidade</small></div></div>
+  <span class="tag">SIMULAÇÃO ACADÊMICA</span>
+</header>
+<section class="hero">
+  <div class="eyebrow">Dashboard de eficiência energética</div>
+  <h1>Iluminação pública mais eficiente e sustentável.</h1>
+  <p>Comparação de três alternativas para uma rua hipotética em São Paulo, considerando 15 postes e 12 horas de funcionamento por noite.</p>
+  <div class="meta">15 pontos de iluminação&nbsp; • &nbsp;30 dias por mês&nbsp; • &nbsp;12 h/noite</div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><h2>Indicadores principais</h2><p class="sub">Resultados calculados pela simulação Python</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="kpi-label">Consumo — vapor de sódio</div><div class="kpi">907,2</div><div class="unit">kWh/mês</div></article>
+    <article class="card"><div class="kpi-label">Consumo — LED na rede</div><div class="kpi">432</div><div class="unit">kWh/mês</div></article>
+    <article class="card"><div class="kpi-label">Economia estimada com LED</div><div class="kpi">52,4%</div><div class="unit">475,2 kWh/mês a menos</div><div class="kpi-note">Em relação ao cenário de sódio</div></article>
+    <article class="card"><div class="kpi-label">Geração solar estimada</div><div class="kpi">518,6</div><div class="unit">kWh/mês — 15 painéis</div></article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><h2>Comparação de consumo</h2><p class="sub">Consumo ou demanda mensal estimada para os 15 postes</p></div></div>
+  <div class="compare">
+    <article class="card">
+      <div class="bar-row"><div class="bar-title"><span>Vapor de sódio</span><b>907,2 kWh</b></div><div class="track"><div class="fill sodium"></div></div></div>
+      <div class="bar-row"><div class="bar-title"><span>LED conectado à rede</span><b>432 kWh</b></div><div class="track"><div class="fill led"></div></div></div>
+      <div class="bar-row"><div class="bar-title"><span>LED solar — demanda</span><b>432 kWh</b></div><div class="track"><div class="fill solar"></div></div></div>
+      <p class="legend">As barras comparam a demanda mensal das luminárias. No cenário solar, essa demanda não representa consumo da rede elétrica.</p>
+    </article>
+    <article class="card">
+      <h3 style="margin:0 0 8px;font-size:15px">O que os números indicam?</h3>
+      <p style="margin:0;color:var(--muted);font-size:14px">Com as potências adotadas, o LED conectado à rede consome aproximadamente 52,4% menos energia que o cenário de vapor de sódio.</p>
+      <div class="note" style="margin-top:16px">A comparação não comprova que luminárias de 80 W entreguem o mesmo nível de iluminação das lâmpadas de sódio. Isso exige projeto luminotécnico.</div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><h2>Alternativa com energia solar</h2><p class="sub">Configuração de referência simulada por poste</p></div></div>
+  <div class="solar-box">
+    <article class="card">
+      <div class="mini"><b>400 Wp</b><span>Painel fotovoltaico por poste</span></div>
+      <div class="mini" style="margin-top:10px"><b>25,6 V / 60 Ah</b><span>Bateria de referência por poste</span></div>
+      <div class="mini" style="margin-top:10px"><b>13,8 horas</b><span>Autonomia teórica estimada da bateria</span></div>
+      <div class="mini" style="margin-top:10px"><b>518,6 kWh/mês</b><span>Geração solar mensal estimada para 15 postes</span></div>
+    </article>
+    <article class="card">
+      <h3 style="margin:0;font-size:15px">Diagrama conceitual</h3>
+      <img class="diagram" src="imagens/diagrama.png" alt="Diagrama conceitual do sistema de iluminação solar LumiCity" onerror="this.style.display='none';document.getElementById('imgfallback').style.display='block'">
+      <p id="imgfallback" style="display:none;color:#65756e;font-size:13px">O diagrama ainda não foi carregado. Verifique o arquivo imagens/diagrama.png.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="note"><b>Limitações importantes:</b> os valores são estimativas acadêmicas. A HSP de 4,3 h/dia, o fator de desempenho de 0,67 e as especificações dos equipamentos são premissas a validar. A geração média mensal não garante autonomia em dias nublados. Custos e emissões não foram calculados.</div>
+</section>
+<footer class="footer"><span>LumiCity • Projeto acadêmico SERS</span><span>Valores estimados — não utilizar como projeto executivo</span></footer>
+</div>
+</body>
+</html>
