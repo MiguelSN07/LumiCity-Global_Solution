@@ -1,16 +1,24 @@
 """
-LumiCity - simulacao simples de iluminacao publica
+LumiCity - simulacao simples de iluminacao publica.
 Projeto academico: valores estimados, nao sao projeto executivo.
+Execute na raiz do repositorio:
+    python simulacao/simulacao.py
 """
 
 POSTES = 15
 HORAS_POR_NOITE = 12
 DIAS_POR_MES = 30
-POTENCIA_SODIO_W = 168  # lampada de 150 W + 18 W estimados de reator
+
+# Premissas de potencia; perdas de 18 W do reator sao hipoteticas.
+POTENCIA_SODIO_W = 168
 POTENCIA_LED_W = 80
+
+# Premissas solares provisórias, a validar com dados locais e fichas técnicas.
 PAINEL_WP = 400
-HSP = 4.3                 # horas de sol pico por dia (premissa)
+HSP = 4.3
 FATOR_DESEMPENHO = 0.67
+
+# Bateria de referência por poste.
 BATERIA_V = 25.6
 BATERIA_AH = 60
 PROFUNDIDADE_DESCARGA = 0.80
@@ -22,8 +30,8 @@ def consumo_mensal_kwh(potencia_w):
 
 
 def geracao_solar_mensal_kwh():
-    por_poste_dia = (PAINEL_WP / 1000) * HSP * FATOR_DESEMPENHO
-    return por_poste_dia * DIAS_POR_MES * POSTES
+    geracao_por_poste_dia = (PAINEL_WP / 1000) * HSP * FATOR_DESEMPENHO
+    return geracao_por_poste_dia * DIAS_POR_MES * POSTES
 
 
 def autonomia_bateria_horas():
@@ -38,23 +46,23 @@ def main():
     economia = sodio - led
     percentual = economia / sodio * 100
     geracao = geracao_solar_mensal_kwh()
+    demanda_solar = led
+    autonomia = autonomia_bateria_horas()
 
     print("LumiCity - resultados estimados")
     print(f"Postes analisados: {POSTES}")
-    print(f"Consumo sodio: {sodio:.1f} kWh/mes")
-    print(f"Consumo LED: {led:.1f} kWh/mes")
+    print(f"Consumo vapor de sodio: {sodio:.1f} kWh/mes")
+    print(f"Consumo LED conectado a rede: {led:.1f} kWh/mes")
     print(f"Economia LED vs. sodio: {economia:.1f} kWh/mes ({percentual:.1f}%)")
-    print(f"Demanda atendida pelo LED solar: {led:.1f} kWh/mes")
-    print(f"Geracao solar estimada: {geracao:.1f} kWh/mes")
-    print(f"Autonomia teorica da bateria: {autonomia_bateria_horas():.1f} horas")
+    print(f"Demanda mensal das luminarias solares: {demanda_solar:.1f} kWh/mes")
+    print(f"Geracao solar mensal estimada: {geracao:.1f} kWh/mes")
+    print(f"Autonomia teorica da bateria: {autonomia:.1f} horas")
 
-    if geracao >= led:
-        print("Resultado solar: geracao mensal estimada cobre a demanda mensal.")
-    else:
-        print("Resultado solar: geracao mensal estimada nao cobre toda a demanda.")
-
-    print("\nObservacao: a media mensal nao garante autonomia em dias nublados.")
-    print("Validar iluminancia, dimensionamento, sombreamento e normas antes de instalar.")
+    print("\nATENCAO:")
+    print("- A demanda solar nao e consumo da rede eletrica.")
+    print("- A comparacao mensal nao garante autonomia em dias nublados.")
+    print("- HSP, fator de desempenho e componentes precisam ser validados.")
+    print("- Potencias nao comprovam equivalencia luminotecnica.")
 
 
 if __name__ == "__main__":
