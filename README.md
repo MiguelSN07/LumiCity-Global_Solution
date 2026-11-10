@@ -3,9 +3,9 @@
 Projeto acadêmico de análise de eficiência energética na iluminação pública, considerando uma rua hipotética em São Paulo com **15 postes**.
 
 ## Arquivos
-- `simulacao.py`: calcula consumo, economia, geração solar estimada e autonomia teórica da bateria.
+- `simulacao/simulacao.py`: calcula consumo, economia, geração solar estimada e autonomia teórica da bateria.
 - `dados/dados.csv`: dados usados na comparação.
-- `imagens/diagrama-poste-solar.svg`: diagrama conceitual do sistema solar independente.
+- `imagens/diagrama.png`: diagrama conceitual do sistema solar independente.
 
 ## Como executar
 É necessário ter Python 3 instalado. No terminal, dentro da pasta do projeto:
