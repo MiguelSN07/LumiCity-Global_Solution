@@ -8,8 +8,12 @@ Projeto acadêmico de análise de eficiência energética na iluminação públi
 - `simulacao/simulacao.py`: calcula consumo, economia, geração solar estimada e autonomia teórica da bateria.
 - `dados/dados.csv`: dados usados na comparação.
 - `imagens/diagrama.png`: diagrama conceitual do sistema solar independente.
+- `index.html`: dashboard visual com indicadores, comparação dos cenários e diagrama.
 
-## Dashboard visual\nO arquivo `index.html` apresenta os principais indicadores e a comparação entre os cenários. Ele é uma página estática, sem dependências externas. Para visualizar localmente, abra `index.html` no navegador. Para publicar como site, habilite o GitHub Pages nas configurações do repositório, selecionando a branch `main` e a pasta `/ (root)`.\n\n## Como executar
+## Dashboard visual
+O arquivo `index.html` apresenta os principais indicadores e a comparação entre os cenários. Ele é uma página estática, sem dependências externas. Para visualizar localmente, abra `index.html` no navegador. Para publicar como site, habilite o GitHub Pages nas configurações do repositório, selecionando a branch `main` e a pasta `/ (root)`.
+
+## Como executar
 É necessário ter Python 3 instalado. Na pasta principal do repositório, execute:
 
 ```bash
