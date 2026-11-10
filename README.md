@@ -1,5 +1,10 @@
 # LumiCity — Simulação Energética
 
+
+## Dashboard online
+
+Acesse o dashboard do LumiCity: https://miguelsn07.github.io/LumiCity-simulacao/
+
 Projeto acadêmico de análise de eficiência energética na iluminação pública, considerando uma rua hipotética em São Paulo com **15 postes**.
 
 > **Importante:** todos os resultados são estimativas acadêmicas baseadas nas premissas descritas abaixo. Não são medições reais nem um projeto executivo.
