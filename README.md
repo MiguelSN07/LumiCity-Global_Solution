@@ -9,7 +9,7 @@ Projeto acadêmico de análise de eficiência energética na iluminação públi
 - `dados/dados.csv`: dados usados na comparação.
 - `imagens/diagrama.png`: diagrama conceitual do sistema solar independente.
 
-## Como executar
+## Dashboard visual\nO arquivo `index.html` apresenta os principais indicadores e a comparação entre os cenários. Ele é uma página estática, sem dependências externas. Para visualizar localmente, abra `index.html` no navegador. Para publicar como site, habilite o GitHub Pages nas configurações do repositório, selecionando a branch `main` e a pasta `/ (root)`.\n\n## Como executar
 É necessário ter Python 3 instalado. Na pasta principal do repositório, execute:
 
 ```bash
