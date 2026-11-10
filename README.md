@@ -1,2 +1,2 @@
-# LumiCity-SERS-Soluções-em-Energias-Renovaveis-e-Sustentaveis
+# LumiCity-simulações
 Trabalho GS - FIAP
