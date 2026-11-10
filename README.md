@@ -11,7 +11,7 @@ Projeto acadêmico de análise de eficiência energética na iluminação públi
 É necessário ter Python 3 instalado. No terminal, dentro da pasta do projeto:
 
 ```bash
-python simulacao.py
+python simulacao/simulacao.py
 ```
 
 Não é necessário instalar bibliotecas externas.
