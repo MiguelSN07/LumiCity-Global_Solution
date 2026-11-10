@@ -1,6 +1,7 @@
 alternativa,postes,potencia_por_ponto_W,horas_por_noite,dias_por_mes,consumo_ou_demanda_kWh_mes,observacao
-Vapor de sodio,15,168,12,30,907.2,"Lampada de 150 W + 18 W estimados de perdas do reator"
+Vapor de sodio,15,168,12,30,907.2,"150 W da lampada + 18 W assumidos para perdas do reator; validar ficha tecnica"
 LED conectado a rede,15,80,12,30,432.0,"Consumo estimado da rede eletrica"
-LED solar independente,15,80,12,30,432.0,"Demanda das lampadas; nao representa consumo da rede"
-Geracao solar estimada,15,400,4.3,30,518.58,"Painel de 400 Wp por poste; fator de desempenho 0.67"
-Economia LED vs sodio,15,,,,475.2,"52.4 por cento de reducao em relacao ao sodio"
+LED solar independente,15,80,12,30,432.0,"Demanda das luminarias; nao representa consumo da rede"
+Geracao solar estimada,15,400,4.3,30,518.58,"Painel de 400 Wp por poste; HSP 4.3 e fator 0.67 sao premissas provisórias"
+Economia LED vs sodio,15,,,,475.2,"52.4 por cento de reducao em relacao ao cenario de sodio"
+Autonomia teorica bateria,15,,,,13.8,"Bateria 25.6 V 60 Ah; DoD 80 por cento; eficiencia 90 por cento; valor simplificado"
