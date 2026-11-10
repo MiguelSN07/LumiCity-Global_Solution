@@ -95,7 +95,7 @@ Onde a rede elétrica já existe, o LED conectado à rede pode ser a alternativa
 - **INPE / LABREN.** Atlas Brasileiro de Energia Solar — 2ª edição. Dados e consulta de irradiação para o Estado de São Paulo. https://labren.ccst.inpe.br/atlas_2017_SP.html
 - **INPE / LABREN.** Atlas Brasileiro de Energia Solar — informações sobre a base de dados e forma de citação. https://labren.ccst.inpe.br/atlas_2017.html
 - **NREL.** PVWatts — System Losses. Explica categorias de perdas fotovoltaicas; não valida por si só o fator 0,67 usado nesta simulação. https://pvwatts.nlr.gov/docs/help_system_sysloss.php
-- **EDP.** Especificação Técnica ES.DT.PDN.00147, versão 08, “Iluminação Pública — Acessórios” (25 set. 2023). Documento de acessórios de iluminação pública e referências normativas; não foi usado para afirmar um valor específico de perda de 18 W ou 22 W. https://www.edp.com.br/Ginp/Download/ES.DT.PDN.00147_V8.pdf
+- **EDP.** Especificação Técnica ES.DT.PDN.00147, versão 08, “Iluminação Pública — Acessórios” (25 set. 2023). Documento de acessórios de iluminação pública e referências normativas; não foi usado para afirmar um valor específico de perda de 18 W ou 22 W. https://www.edp.com.br/media/ueue3xtd/esdtpdn00147_v8.pdf
 - **ABNT.** NBR 5101:2024 — Iluminação viária. Consultar a norma oficial para requisitos de projeto luminotécnico. https://www.abntcatalogo.com.br/
 
 As fontes acima fundamentam o método e apontam onde validar as premissas. Os valores de 18 W, 80 W, 400 Wp, 4,3 HSP, 0,67, 25,6 V e 60 Ah permanecem hipóteses de cenário até serem confirmados por fichas técnicas ou dados locais.
