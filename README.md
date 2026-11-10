@@ -1,2 +1,2 @@
 # LumiCity-simulações
-Trabalho GS - FIAP
+LumiCity — Simulação Energética
